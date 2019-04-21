@@ -150,12 +150,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\Box2DObject.cpp" />
+    <ClCompile Include="..\..\code\CircleParticle.cpp" />
     <ClCompile Include="..\..\code\main.cpp" />
+    <ClCompile Include="..\..\code\ParticleSystem.cpp" />
     <ClCompile Include="..\..\code\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\Box2DObject.hpp" />
+    <ClInclude Include="..\..\code\CircleParticle.hpp" />
     <ClInclude Include="..\..\code\Collision.hpp" />
+    <ClInclude Include="..\..\code\Particle.hpp" />
+    <ClInclude Include="..\..\code\ParticleSystem.hpp" />
     <ClInclude Include="..\..\code\Scene.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

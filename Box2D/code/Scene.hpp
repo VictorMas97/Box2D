@@ -1,5 +1,8 @@
 #pragma once
 #include "Box2DObject.hpp"
+#include "CircleParticle.hpp"
+#include "ParticleSystem.hpp"
+#include "Collision.hpp"
 #include <Box2D/Box2D.h>
 #include <vector>
 
@@ -21,5 +24,9 @@ namespace physics
 		std::map<std::string, std::shared_ptr<Box2DObject>> sceneObjects;
 
 		b2World * box2DWorld;
+
+		CircleParticle particle;
+
+		ParticleSystem particleSystem;
 	};
 }

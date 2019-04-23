@@ -4,7 +4,7 @@ namespace physics
 {
 	CircleParticle::CircleParticle()
 	{
-		shape = new sf::CircleShape(5);
+		shape = new sf::CircleShape(3);
 		//shape->setPosition(position);   //sf::Vector2f(400.f, 560.f)
 		shape->setFillColor(sf::Color::Red);
 	}

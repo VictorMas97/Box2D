@@ -24,9 +24,6 @@
     <ClCompile Include="..\..\code\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\code\ParticleSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\code\CircleParticle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

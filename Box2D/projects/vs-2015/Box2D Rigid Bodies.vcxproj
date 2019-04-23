@@ -152,7 +152,6 @@
     <ClCompile Include="..\..\code\Box2DObject.cpp" />
     <ClCompile Include="..\..\code\CircleParticle.cpp" />
     <ClCompile Include="..\..\code\main.cpp" />
-    <ClCompile Include="..\..\code\ParticleSystem.cpp" />
     <ClCompile Include="..\..\code\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>

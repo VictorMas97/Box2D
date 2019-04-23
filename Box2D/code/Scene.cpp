@@ -5,14 +5,12 @@ namespace physics
 	Scene::Scene(b2Vec2 gravity)
 	{
 		box2DWorld = new b2World(gravity);
-		particleSystem = CircleParticleSystem{ 30, &CircleParticle(), 400.f, 560.f };
+		particleSystem = CircleParticleSystem{ 30, {400.f, 560.f}, -30.f, 30.f };
 
 		Collison * myContactListenerInstance = new Collison{};
 		box2DWorld->SetContactListener(myContactListenerInstance);
 
-		#pragma region Map 
-
-	
+		#pragma region Map 	
 
 		std::vector <b2Vec2> lowFloor1 = 
 		{

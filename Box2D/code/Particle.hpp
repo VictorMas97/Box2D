@@ -7,7 +7,7 @@ namespace physics
 	{
 	public:
 
-		Particle() {};
+		//Particle() {};
 
 		virtual void Render(sf::RenderWindow & window) = 0;
 		virtual void Update(float delta_time) = 0;

@@ -4,8 +4,8 @@ namespace physics
 {
 	CircleParticle::CircleParticle()
 	{
-		shape = new sf::CircleShape(3);
-		shape->setPosition(sf::Vector2f(200.f, 500.f));
+		shape = new sf::CircleShape(5);
+		//shape->setPosition(position);   //sf::Vector2f(400.f, 560.f)
 		shape->setFillColor(sf::Color::Red);
 	}
 
@@ -16,6 +16,6 @@ namespace physics
 
 	void CircleParticle::Update(float delta_time)
 	{
-
+		shape->setPosition(position);
 	}
 }

@@ -27,6 +27,6 @@ namespace physics
 
 		CircleParticle particle;
 
-		ParticleSystem particleSystem;
+		CircleParticleSystem particleSystem;
 	};
 }

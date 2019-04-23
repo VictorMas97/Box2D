@@ -5,12 +5,14 @@ namespace physics
 	Scene::Scene(b2Vec2 gravity)
 	{
 		box2DWorld = new b2World(gravity);
-
-		//particle = CircleParticle{};
-		//particleSystem.particles.push_back(CircleParticle{});
+		particleSystem = CircleParticleSystem{ 30, &CircleParticle(), 400.f, 560.f };
 
 		Collison * myContactListenerInstance = new Collison{};
 		box2DWorld->SetContactListener(myContactListenerInstance);
+
+		#pragma region Map 
+
+	
 
 		std::vector <b2Vec2> lowFloor1 = 
 		{
@@ -140,6 +142,8 @@ namespace physics
 		b2PrismaticJoint* prismaticJoint2 = (b2PrismaticJoint*)box2DWorld->CreateJoint(&prismaticJointDef2);
 
 		sceneObjects["middleFloorPlatform"]->joint = prismaticJoint2;
+
+		#pragma endregion	
 	}
 
 	Scene::~Scene()
@@ -150,14 +154,14 @@ namespace physics
 	void Scene::Update(float delta_time)
 	{
 		//particle.Update(delta_time);
-		//particleSystem.Update(delta_time);
+		particleSystem.Update(delta_time);
 		box2DWorld->Step(delta_time, 8, 4);
 	}
 
 	void Scene::Render(sf::RenderWindow & window)
 	{
 		//particle.Render(window);
-		//particleSystem.Render(window);
+		particleSystem.Render(window);
 
 		for (std::map<std::string, std::shared_ptr<Box2DObject>>::iterator it = sceneObjects.begin(); it != sceneObjects.end(); ++it)
 		{

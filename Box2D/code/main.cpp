@@ -17,7 +17,7 @@ int main ()
 
     window.setVerticalSyncEnabled (true);
 
-	physics::Scene scene{b2Vec2(0.f, -9.8f)};
+	physics::Scene scene{b2Vec2(0.f, -50.f)};
 
     bool running = true;
     Clock timer;

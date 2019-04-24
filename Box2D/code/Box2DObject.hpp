@@ -31,12 +31,14 @@ namespace physics
 
 		b2Fixture * fixture;
 
-		bool m_contacting;
+		bool reset;
 
 		std::string objectTag;
 
-		void startContact() { m_contacting = true; }
-		void endContact() { m_contacting = false; }
+		void SetReset(bool restart)
+		{
+			reset = restart;
+		}
 	};
 }
 

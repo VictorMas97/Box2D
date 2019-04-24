@@ -5,12 +5,20 @@ namespace physics
 	Scene::Scene(b2Vec2 gravity)
 	{
 		box2DWorld = new b2World(gravity);
-		particleSystem = CircleParticleSystem{ 30, {400.f, 550.f}, -30.f, 30.f, -20.f, 20.f, {0.f, -1.f}, -0.5f, 0.5f, 0.f, 0.5f };
+		particleSystem = CircleParticleSystem{ 30, {0.5f, 1.f}, {400.f, 550.f}, {-20.f, 20.f}, {-20.f, 20.f}, {0.f, -1.f}, {-0.2f, 0.2f}, {0.f, 0.5f} };
 
 		Collison * myContactListenerInstance = new Collison{};
 		box2DWorld->SetContactListener(myContactListenerInstance);
 
 		#pragma region Map 	
+
+		std::vector <b2Vec2> fire =
+		{
+			{0, 0},
+			{0, 70},
+			{40, 70},
+			{40, 0},
+		};
 
 		std::vector <b2Vec2> lowFloor1 = 
 		{
@@ -85,8 +93,9 @@ namespace physics
 			{50, -40}
 		};
 
-		//sceneObjects["ball"] = std::make_shared<Box2DObject>(b2Vec2{ 700.f, 40.f }, box2DWorld, b2_dynamicBody, sf::Color::Yellow, "ball", 10.f);
-		sceneObjects["ball"] = std::make_shared<Box2DObject>(b2Vec2{ 150.f, 300.f }, box2DWorld, b2_dynamicBody, sf::Color::Yellow, "ball", 10.f);
+		sceneObjects["ball"] = std::make_shared<Box2DObject>(b2Vec2{ 50.f, 200.f }, box2DWorld, b2_dynamicBody, sf::Color::Yellow, "ball", 10.f);
+
+		sceneObjects["fire"] = std::make_shared<Box2DObject>(b2Vec2{ 382.f, 40.f }, box2DWorld, b2_staticBody, sf::Color::Transparent, "fire", fire);
 
 		sceneObjects["lowFloor1"] = std::make_shared<Box2DObject>(b2Vec2{ 0.f, 0.f }, box2DWorld, b2_staticBody, sf::Color::Blue, "lowFloor1", lowFloor1);
 		sceneObjects["lowFloor2"] = std::make_shared<Box2DObject>(b2Vec2{ 200.f, 0.f }, box2DWorld, b2_staticBody, sf::Color::Blue, "lowFloor2", lowFloor2);
@@ -102,6 +111,8 @@ namespace physics
 		sceneObjects["finishPlatform1"] = std::make_shared<Box2DObject>(b2Vec2{ 50.f, 400.f }, box2DWorld, b2_staticBody, sf::Color::Red, "finishPlatform1", finishPlatform1);
 		sceneObjects["finishPlatform2"] = std::make_shared<Box2DObject>(b2Vec2{ 0.f, 440.f }, box2DWorld, b2_staticBody, sf::Color::Red, "finishPlatform2", finishPlatform2);
 
+		ball = sceneObjects["ball"];
+		particleSystemActive = true;
 
 		b2PrismaticJointDef prismaticJointDef;
 		prismaticJointDef.bodyA = sceneObjects["lowFloor2"]->body;
@@ -151,20 +162,40 @@ namespace physics
 
 	void Scene::Update(float delta_time)
 	{
-		//particle.Update(delta_time);
 		particleSystem.Update(delta_time);
 		box2DWorld->Step(delta_time, 8, 4);
+
+		if (ball->reset)
+		{
+			ball->body->SetTransform({ 50.f, 200.f }, 0.f);
+			ball->body->SetLinearVelocity({0.f, 0.f});
+			ball->SetReset(false);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+		{
+			ball->body->ApplyForce({ -5000.f, 0.f }, ball->body->GetWorldCenter(), false);
+		}
+
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+		{
+			ball->body->ApplyForce({ 5000.f, 0.f }, ball->body->GetWorldCenter(), false);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::F))
+		{
+			sceneObjects["fire"]->body->SetActive(false);
+			particleSystemActive = false;
+		}
 	}
 
 	void Scene::Render(sf::RenderWindow & window)
 	{
-		//particle.Render(window);
-		particleSystem.Render(window);
+		particleSystem.Render(window, particleSystemActive);
 
 		for (std::map<std::string, std::shared_ptr<Box2DObject>>::iterator it = sceneObjects.begin(); it != sceneObjects.end(); ++it)
 		{
 			it->second->Render(window);
-			//std::cout << it->first << " => " << it->second << std::endl;
 		}
 	}
 }

@@ -25,8 +25,10 @@ namespace physics
 
 		b2World * box2DWorld;
 
-		CircleParticle particle;
-
 		CircleParticleSystem particleSystem;
+
+		std::shared_ptr<Box2DObject> ball;
+
+		bool particleSystemActive;
 	};
 }

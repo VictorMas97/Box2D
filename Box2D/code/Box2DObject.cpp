@@ -6,7 +6,7 @@ namespace physics
 	Box2DObject::Box2DObject(b2Vec2 objectPosition, b2World* box2DWorld, b2BodyType shapeType, sf::Color shapeColor, std::string tag, float radius)
 	{
 		// Se crea el body a partir de una definicion de sus caracteristicas:
-		m_contacting = false;
+		reset = false;
 		b2BodyDef body_definition;
 		body_definition.type = shapeType; // abstraer
 		body_definition.position.Set(objectPosition.x, objectPosition.y);  // Posicion inicial absoluta del objeto
@@ -38,7 +38,7 @@ namespace physics
 	Box2DObject::Box2DObject(b2Vec2 objectPosition, b2World * box2DWorld, b2BodyType shapeType, sf::Color shapeColor, std::string tag, std::vector<b2Vec2> polygonVertices)
 	{
 		// Se crea el body a partir de una definicion de sus caracteristicas:
-
+		reset = false;
 		b2BodyDef body_definition;
 
 		body_definition.type = shapeType; // abstraer

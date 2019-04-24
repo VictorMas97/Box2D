@@ -13,36 +13,39 @@ namespace physics
 	public:
 
 		ParticleSystem(){}
-		ParticleSystem(int particleCount, sf::Vector2f ParticleSystemPosition, float xMinOffset, float xMaxOffset, float yMinOffset, float yMaxOffset,
-	      sf::Vector2f ParticleSystemVelocity, float xMinOffsetVelocity, float xMaxOffsetVelocity, float yMinOffsetVelocity, float yMaxOffsetVelocity)
+		ParticleSystem(int particleCount, sf::Vector2f lifeTime, sf::Vector2f ParticleSystemPosition, sf::Vector2f xPositionOffset, sf::Vector2f yPositionOffset,
+	                                                             sf::Vector2f ParticleSystemVelocity, sf::Vector2f xVelocityOffset, sf::Vector2f yVelocityOffset)
 		{
 			srand(static_cast <unsigned> (time(0)));
 
 			for (int i =  0; i < particleCount; i++)
 			{				
 				PARTICLE particle{};
-				std::cout << getRamdomFloat(xMinOffset, xMaxOffset) << std::endl;
-				particle.position = sf::Vector2f 
+				//std::cout << getRamdomFloat(xMinOffset, xMaxOffset) << std::endl;
+				particle.startPosition = particle.position = sf::Vector2f
 				{ 
-					ParticleSystemPosition.x + getRamdomFloat(xMinOffset, xMaxOffset), 
-					ParticleSystemPosition.y + getRamdomFloat(yMinOffset, yMaxOffset)
+					ParticleSystemPosition.x + getRamdomFloat(xPositionOffset.x, xPositionOffset.y),
+					ParticleSystemPosition.y + getRamdomFloat(yPositionOffset.x, yPositionOffset.y)
 				};
 
 				particle.velocity = sf::Vector2f
 				{
-					ParticleSystemVelocity.x + getRamdomFloat(xMinOffsetVelocity, xMaxOffsetVelocity),
-					ParticleSystemVelocity.y + getRamdomFloat(yMinOffsetVelocity, yMaxOffsetVelocity)
+					ParticleSystemVelocity.x + getRamdomFloat(xVelocityOffset.x, xVelocityOffset.y),
+					ParticleSystemVelocity.y + getRamdomFloat(yVelocityOffset.x, yVelocityOffset.y)
 				};
+
+				particle.lifeTime = getRamdomFloat(lifeTime.x, lifeTime.y);
+
 				particles.push_back(particle);
 			}
-			std::cout << particles.size() << std::endl;
+			//std::cout << particles.size() << std::endl;
 		}
 
-		void Render(sf::RenderWindow & window)
+		void Render(sf::RenderWindow & window, bool ParticleSystemActive)
 		{
 			for (auto & particle : particles)
 			{
-				particle.Render(window);
+				particle.Render(window, ParticleSystemActive);
 			}
 		}
 

@@ -5,17 +5,28 @@ namespace physics
 	CircleParticle::CircleParticle()
 	{
 		shape = new sf::CircleShape(3);
-		//shape->setPosition(position);   //sf::Vector2f(400.f, 560.f)
 		shape->setFillColor(sf::Color::Red);
 	}
 
-	void CircleParticle::Render(sf::RenderWindow & window)
+	void CircleParticle::Render(sf::RenderWindow & window, bool active)
 	{
-		window.draw(*shape);
+		if (active)
+		{
+			window.draw(*shape);
+		}
 	}
 
 	void CircleParticle::Update(float delta_time)
 	{
+		startTime += delta_time;
+
+		if (startTime >= lifeTime)
+		{
+			startTime = 0;
+			position = startPosition;
+		}
+
+		position += velocity;
 		shape->setPosition(position);
 	}
 }

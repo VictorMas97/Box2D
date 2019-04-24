@@ -7,7 +7,7 @@ namespace physics
 	{
 	public:
 		CircleParticle();
-		virtual void Render(sf::RenderWindow & window) override;
+		virtual void Render(sf::RenderWindow & window, bool active) override;
 		virtual void Update(float delta_time) override;
 	};
 }

@@ -13,24 +13,27 @@ namespace physics
 	public:
 
 		ParticleSystem(){}
-		ParticleSystem(int particleCount, sf::Vector2f ParticleSystemPosition, float xMinOffset, float xMaxOffset)
+		ParticleSystem(int particleCount, sf::Vector2f ParticleSystemPosition, float xMinOffset, float xMaxOffset, float yMinOffset, float yMaxOffset,
+	      sf::Vector2f ParticleSystemVelocity, float xMinOffsetVelocity, float xMaxOffsetVelocity, float yMinOffsetVelocity, float yMaxOffsetVelocity)
 		{
 			srand(static_cast <unsigned> (time(0)));
 
 			for (int i =  0; i < particleCount; i++)
 			{				
-				PARTICLE a{};
+				PARTICLE particle{};
 				std::cout << getRamdomFloat(xMinOffset, xMaxOffset) << std::endl;
-				a.position = sf::Vector2f 
+				particle.position = sf::Vector2f 
 				{ 
 					ParticleSystemPosition.x + getRamdomFloat(xMinOffset, xMaxOffset), 
-					ParticleSystemPosition.y
+					ParticleSystemPosition.y + getRamdomFloat(yMinOffset, yMaxOffset)
 				};
-				particles.push_back(a);//, sf::Vector2f{ xMin, xMax }
 
-				//particlePosX = rand() % 100;
-				//particlePosY = rand() % 100;
-				//a.position = sf::Vector2f{ particlePosX, particlePosY };
+				particle.velocity = sf::Vector2f
+				{
+					ParticleSystemVelocity.x + getRamdomFloat(xMinOffsetVelocity, xMaxOffsetVelocity),
+					ParticleSystemVelocity.y + getRamdomFloat(yMinOffsetVelocity, yMaxOffsetVelocity)
+				};
+				particles.push_back(particle);
 			}
 			std::cout << particles.size() << std::endl;
 		}
@@ -49,7 +52,7 @@ namespace physics
 			{
 				particle.Update(delta_time);
 			}
-			std::cout << "hh";
+			//std::cout << "hh";
 		}
 
 		std::vector<PARTICLE> particles;

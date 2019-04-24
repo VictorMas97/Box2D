@@ -5,7 +5,7 @@ namespace physics
 	Scene::Scene(b2Vec2 gravity)
 	{
 		box2DWorld = new b2World(gravity);
-		particleSystem = CircleParticleSystem{ 30, {400.f, 560.f}, -30.f, 30.f };
+		particleSystem = CircleParticleSystem{ 30, {400.f, 550.f}, -30.f, 30.f, -20.f, 20.f, {0.f, -1.f}, -0.5f, 0.5f, 0.f, 0.5f };
 
 		Collison * myContactListenerInstance = new Collison{};
 		box2DWorld->SetContactListener(myContactListenerInstance);

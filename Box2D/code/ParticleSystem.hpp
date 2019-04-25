@@ -20,8 +20,25 @@ namespace physics
 	class ParticleSystem
 	{
 	public:
+		
+		/**
+		* @brief Constructor por defecto de ParticleSystem
+		*/
 
 		ParticleSystem(){}
+
+		/**
+		* @brief Renderiza la escena
+		* @param particleCount -> el número de partículas que va a tener el sistema de partículas
+		* @param lifeTime -> el tiempo de vida del sistema de partículas
+		* @param ParticleSystemPosition -> la posición del sistema de partículas
+		* @param xPositionOffset -> los offsets de la posición del eje X del sistema de partículas
+		* @param yPositionOffset -> los offsets de la posición del eje Y del sistema de partículas
+		* @param ParticleSystemVelocity -> la velocidad del sistema de partículas
+		* @param xVelocityOffset -> los offsets de la velocidad del eje X del sistema de partículas
+		* @param yVelocityOffset -> los offsets de la velocidad del eje Y del sistema de partículas
+		*/
+
 		ParticleSystem(int particleCount, sf::Vector2f lifeTime, sf::Vector2f ParticleSystemPosition, sf::Vector2f xPositionOffset, sf::Vector2f yPositionOffset,
 	                                                             sf::Vector2f ParticleSystemVelocity, sf::Vector2f xVelocityOffset, sf::Vector2f yVelocityOffset)
 		{
@@ -49,6 +66,12 @@ namespace physics
 			}
 		}
 
+		/**
+		* @brief Renderiza el sistema de partículas
+		* @param window -> es la ventana en donde se tiene que renderizar la escena
+		* @param ParticleSystemActive -> Si es "true" significa que el sistema de partículas se debe renderizar
+		*/
+
 		void Render(sf::RenderWindow & window, bool ParticleSystemActive)
 		{
 			for (auto & particle : particles)
@@ -56,6 +79,11 @@ namespace physics
 				particle.Render(window, ParticleSystemActive);
 			}
 		}
+
+		/**
+		* @brief Atualiza el sistema de partículas
+		* @param delta_time -> son los segundos por frame
+		*/
 
 		void Update(float delta_time)
 		{
@@ -65,12 +93,22 @@ namespace physics
 			}
 		}
 
-		std::vector<PARTICLE> particles;
+		/**
+		* @brief Calcula un número aleatorio entre el rango de los parámetros y lo devuelve
+		* @param a -> el número mínimo del rango
+		* @param b -> el número máximo del rango
+		*/	
 
 		float getRamdomFloat(float a, float b)
 		{
 			return ((b - a) * ((float)rand() / RAND_MAX)) + a;
 		}
+
+		/**
+		* @brief Un vector de todas las pertículas que pertenecen al mismo sistema de partículas
+		*/	
+
+		std::vector<PARTICLE> particles;
 	};
 
 	typedef ParticleSystem<CircleParticle> CircleParticleSystem;

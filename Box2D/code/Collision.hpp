@@ -20,6 +20,11 @@ namespace physics
 
 	public:
 
+		/**
+		* @brief Se ejecuta cuando un objeto empieza a colisionar con otro
+		* @param contact -> contiene toda la información de la colisión entre los objetos 
+		*/
+
 		void BeginContact(b2Contact* contact)
 		{
 			Box2DObject * firstObject = static_cast<Box2DObject *> (contact->GetFixtureA()->GetBody()->GetUserData());
@@ -38,6 +43,11 @@ namespace physics
 				}
 			}
 		}
+
+		/**
+		* @brief Se ejecuta cuando un objeto termina de colisionar con otro
+		* @param contact -> contiene toda la información de la colisión entre los objetos
+		*/
 
 		void EndContact(b2Contact* contact)
 		{

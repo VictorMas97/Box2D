@@ -19,14 +19,14 @@ namespace physics
 	public:
 
 		/**
-		* @brief Contructor por defecto de Box2DObject
+		* @brief Constructor por defecto de Box2DObject
 		*/	
 
 		Box2DObject() {};
 
 		/**
-		* @brief Contructor alternativo de Box2DObject que sirve para contruir Box2DObject cuya forma sea una circumferencia
-		* @param objectPosition -> la posici贸n del objeto
+		* @brief Constructor alternativo de Box2DObject que sirve para contruir Box2DObject cuya forma sea una circumferencia
+		* @param objectPosition -> la posici髇 del objeto
 		* @param box2DWorld -> el mundo al que pertenece el objeto
 		* @param shapeType -> el tipo de forma del objeto
 		* @param shapeColor -> el color de la forma del objeto
@@ -38,7 +38,7 @@ namespace physics
 
 		/**
 		* @brief Contructor alternativo de Box2DObject que sirve para contruir Box2DObject cuya forma sea un poligono
-		* @param objectPosition -> la posici贸n del objeto
+		* @param objectPosition -> la posici髇 del objeto
 		* @param box2DWorld -> el mundo al que pertenece el objeto
 		* @param shapeType -> el tipo de forma del objeto
 		* @param shapeColor -> el color de la forma del objeto
@@ -50,7 +50,7 @@ namespace physics
 
 		/**
 		* @brief Se encarga de convertir el sistema de coordenadas para que la escena no se vea invertida.
-		* @param box2d_position -> la posici贸n del "Box2DObject"
+		* @param box2d_position -> la posici髇 del "Box2DObject"
 		* @param window_height -> la altura de la ventana
 		*/	
 
@@ -64,7 +64,7 @@ namespace physics
 		void Render(sf::RenderWindow & window);
 
 		/**
-		* @brief Actualiza la variabla "reset" con la informaci贸n el parametro
+		* @brief Actualiza la variabla "reset" con la informaci髇 del parametro
 		* @param restart -> si es "true" significa que el "Box2DObject" se debe resetear
 		*/	
 
@@ -74,13 +74,13 @@ namespace physics
 		}
 
 		/**
-		* @brief Puntero a la forma f铆sica del "Box2DObject"
+		* @brief Puntero a la forma f憝sica del "Box2DObject"
 		*/	
 
 		b2Shape * box2DShape;
 
 		/**
-		* @brief Puntero a la forma gr谩fica del "Box2DObject"
+		* @brief Puntero a la forma gr醘ica del "Box2DObject"
 		*/	
 
 		sf::Shape * graphicShape;

@@ -23,8 +23,8 @@ namespace physics
 	public:
 
 		/**
-		* @brief Contructor de la escena
-		* @param gravity -> gravedad del mundo, por defecto es de -9.8 n el eje Y
+		* @brief Constructor de la escena
+		* @param gravity -> gravedad del mundo, por defecto es de -9.8 en el eje Y
 		*/	
 
 		Scene(b2Vec2 gravity = b2Vec2{ 0, -9.8f });

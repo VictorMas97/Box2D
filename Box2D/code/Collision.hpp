@@ -1,3 +1,13 @@
+
+/**
+* @file Collision.hpp
+* @author Victor Mas Toledo
+* @date 10/04/2019
+* @class Collision
+* @brief Clase en donde se llaman a las colisiones de los objetos con otros
+*/
+
+
 #pragma once
 #include <Box2D/Box2D.h>
 #include <iostream>
@@ -9,6 +19,7 @@ namespace physics
 	{
 
 	public:
+
 		void BeginContact(b2Contact* contact)
 		{
 			Box2DObject * firstObject = static_cast<Box2DObject *> (contact->GetFixtureA()->GetBody()->GetUserData());
@@ -23,9 +34,7 @@ namespace physics
 
 				else if (firstObject->objectTag == "fire" && secondObject->objectTag == "ball")
 				{
-					std::cout << "hola";
 					secondObject->SetReset(true);
-					//secondObject->body->SetTransform({ 50.f, 200.f }, 0.f);
 				}
 			}
 		}

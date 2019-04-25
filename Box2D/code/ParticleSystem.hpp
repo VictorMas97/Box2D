@@ -1,3 +1,12 @@
+
+/**
+* @file ParticleSystem.hpp
+* @author Victor Mas Toledo
+* @date 23/04/2019
+* @class ParticleSystem
+* @brief Clase que se encarga de montar el sistema de partículas, renderizarlo y updatearlo
+*/
+
 #pragma once
 #include "CircleParticle.hpp"
 #include <SFML/Graphics.hpp>
@@ -21,7 +30,7 @@ namespace physics
 			for (int i =  0; i < particleCount; i++)
 			{				
 				PARTICLE particle{};
-				//std::cout << getRamdomFloat(xMinOffset, xMaxOffset) << std::endl;
+
 				particle.startPosition = particle.position = sf::Vector2f
 				{ 
 					ParticleSystemPosition.x + getRamdomFloat(xPositionOffset.x, xPositionOffset.y),
@@ -38,7 +47,6 @@ namespace physics
 
 				particles.push_back(particle);
 			}
-			//std::cout << particles.size() << std::endl;
 		}
 
 		void Render(sf::RenderWindow & window, bool ParticleSystemActive)
@@ -55,7 +63,6 @@ namespace physics
 			{
 				particle.Update(delta_time);
 			}
-			//std::cout << "hh";
 		}
 
 		std::vector<PARTICLE> particles;

@@ -6,9 +6,10 @@ namespace physics
 	Box2DObject::Box2DObject(b2Vec2 objectPosition, b2World* box2DWorld, b2BodyType shapeType, sf::Color shapeColor, std::string tag, float radius)
 	{
 		// Se crea el body a partir de una definicion de sus caracteristicas:
+
 		reset = false;
 		b2BodyDef body_definition;
-		body_definition.type = shapeType; // abstraer
+		body_definition.type = shapeType; 
 		body_definition.position.Set(objectPosition.x, objectPosition.y);  // Posicion inicial absoluta del objeto
 		body = box2DWorld->CreateBody(&body_definition);
 		objectTag = tag;
@@ -38,12 +39,12 @@ namespace physics
 	Box2DObject::Box2DObject(b2Vec2 objectPosition, b2World * box2DWorld, b2BodyType shapeType, sf::Color shapeColor, std::string tag, std::vector<b2Vec2> polygonVertices)
 	{
 		// Se crea el body a partir de una definicion de sus caracteristicas:
+
 		reset = false;
 		b2BodyDef body_definition;
 
-		body_definition.type = shapeType; // abstraer
+		body_definition.type = shapeType; 
 		body_definition.position.Set(objectPosition.x, objectPosition.y);   // Posicion inicial absoluta del objeto
-		//body_definition.angle = 0.4f;
 		body = box2DWorld->CreateBody(&body_definition);
 		body->SetUserData(this);
 		objectTag = tag;
@@ -52,8 +53,7 @@ namespace physics
 
 		box2DShape = new b2PolygonShape;
 		b2PolygonShape * polygon = dynamic_cast<b2PolygonShape *>(box2DShape);
-		//polygon->SetAsBox(25.f, 25.f);
-		polygon->Set(&polygonVertices[0], polygonVertices.size());   //polygonVertices->Length());
+		polygon->Set(&polygonVertices[0], polygonVertices.size()); 
 
 		graphicShape = new sf::ConvexShape;
 		sf::ConvexShape * graphicPolygon = dynamic_cast<sf::ConvexShape *>(graphicShape);

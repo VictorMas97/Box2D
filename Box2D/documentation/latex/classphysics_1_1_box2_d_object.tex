@@ -1,0 +1,230 @@
+\hypertarget{classphysics_1_1_box2_d_object}{}\section{Referencia de la Clase physics\+:\+:Box2\+D\+Object}
+\label{classphysics_1_1_box2_d_object}\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+
+
+{\ttfamily \#include $<$Box2\+D\+Object.\+hpp$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysics_1_1_box2_d_object_a7e516163bae7ac67fecf1fc8f0efe4a8}{Box2\+D\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysics_1_1_box2_d_object_a17fee99cc0bb08ce929da9f96266e1ee}{Box2\+D\+Object}} (b2\+Vec2 object\+Position, b2\+World $\ast$box2\+D\+World, b2\+Body\+Type shape\+Type, sf\+::\+Color shape\+Color, std\+::string tag, float radius)
+\begin{DoxyCompactList}\small\item\em Constructor alternativo de \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} que sirve para contruir \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} cuya forma sea una circumferencia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysics_1_1_box2_d_object_ab1c9b90169e6af0d61d02fd1864c1f79}{Box2\+D\+Object}} (b2\+Vec2 object\+Position, b2\+World $\ast$box2\+D\+World, b2\+Body\+Type shape\+Type, sf\+::\+Color shape\+Color, std\+::string tag, std\+::vector$<$ b2\+Vec2 $>$ polygon\+Vertices)
+\begin{DoxyCompactList}\small\item\em Contructor alternativo de \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} que sirve para contruir \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} cuya forma sea un poligono. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classphysics_1_1_box2_d_object_a31f08b794a71539e46bb24bced4f7e64}{box2d\+\_\+position\+\_\+to\+\_\+sfml\+\_\+position}} (const b2\+Vec2 \&box2d\+\_\+position, float window\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Se encarga de convertir el sistema de coordenadas para que la escena no se vea invertida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysics_1_1_box2_d_object_a492fd6b506a753fd6b951d1d34887ef6}{Render}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Renderiza la escena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysics_1_1_box2_d_object_ac2f4e4e05dddfd5feee67437d386cd28}{Set\+Reset}} (bool restart)
+\begin{DoxyCompactList}\small\item\em Actualiza la variabla \char`\"{}reset\char`\"{} con la informaci�n del parametro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+b2\+Shape $\ast$ \mbox{\hyperlink{classphysics_1_1_box2_d_object_acb1533ee4d29918da8a5bef71f8471a6}{box2\+D\+Shape}}
+\begin{DoxyCompactList}\small\item\em Puntero a la forma f��sica del \char`\"{}\+Box2\+D\+Object\char`\"{}. \end{DoxyCompactList}\item 
+sf\+::\+Shape $\ast$ \mbox{\hyperlink{classphysics_1_1_box2_d_object_a9320c72ec99831f83815705310afc310}{graphic\+Shape}}
+\begin{DoxyCompactList}\small\item\em Puntero a la forma gr�fica del \char`\"{}\+Box2\+D\+Object\char`\"{}. \end{DoxyCompactList}\item 
+b2\+Body $\ast$ \mbox{\hyperlink{classphysics_1_1_box2_d_object_aedb1fc28b8fee5f34c0f542b96dd1e5b}{body}}
+\begin{DoxyCompactList}\small\item\em Puntero al body del \char`\"{}\+Box2\+D\+Object\char`\"{}. \end{DoxyCompactList}\item 
+b2\+Joint $\ast$ \mbox{\hyperlink{classphysics_1_1_box2_d_object_adf5502b402e747e81b23d775edf01e1e}{joint}}
+\begin{DoxyCompactList}\small\item\em Puntero al joint de Box2D. \end{DoxyCompactList}\item 
+b2\+Fixture $\ast$ \mbox{\hyperlink{classphysics_1_1_box2_d_object_aec4f77e4b78cb4e21d6d68b9559ab26a}{fixture}}
+\begin{DoxyCompactList}\small\item\em Puntero a la fixture del \char`\"{}\+Box2\+D\+Object\char`\"{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classphysics_1_1_box2_d_object_aaa299282a55be796b5bacd59cf1e3255}{reset}}
+\begin{DoxyCompactList}\small\item\em Si es \char`\"{}true\char`\"{} significa que el \char`\"{}\+Box2\+D\+Object\char`\"{} se debe resetear. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classphysics_1_1_box2_d_object_a0103458a13007508e8ec964b4902e800}{object\+Tag}}
+\begin{DoxyCompactList}\small\item\em Contine el tag del \char`\"{}\+Box2\+D\+Object\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_a7e516163bae7ac67fecf1fc8f0efe4a8}\label{classphysics_1_1_box2_d_object_a7e516163bae7ac67fecf1fc8f0efe4a8}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!Box2\+D\+Object@{Box2\+D\+Object}}
+\index{Box2\+D\+Object@{Box2\+D\+Object}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{Box2\+D\+Object()}{Box2DObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily physics\+::\+Box2\+D\+Object\+::\+Box2\+D\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto de \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}}. 
+
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_a17fee99cc0bb08ce929da9f96266e1ee}\label{classphysics_1_1_box2_d_object_a17fee99cc0bb08ce929da9f96266e1ee}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!Box2\+D\+Object@{Box2\+D\+Object}}
+\index{Box2\+D\+Object@{Box2\+D\+Object}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{Box2\+D\+Object()}{Box2DObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Box2\+D\+Object\+::\+Box2\+D\+Object (\begin{DoxyParamCaption}\item[{b2\+Vec2}]{object\+Position,  }\item[{b2\+World $\ast$}]{box2\+D\+World,  }\item[{b2\+Body\+Type}]{shape\+Type,  }\item[{sf\+::\+Color}]{shape\+Color,  }\item[{std\+::string}]{tag,  }\item[{float}]{radius }\end{DoxyParamCaption})}
+
+
+
+Constructor alternativo de \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} que sirve para contruir \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} cuya forma sea una circumferencia. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em object\+Position} & -\/$>$ la posici�n del objeto \\
+\hline
+{\em box2\+D\+World} & -\/$>$ el mundo al que pertenece el objeto \\
+\hline
+{\em shape\+Type} & -\/$>$ el tipo de forma del objeto \\
+\hline
+{\em shape\+Color} & -\/$>$ el color de la forma del objeto \\
+\hline
+{\em tag} & -\/$>$ el tag del objeto \\
+\hline
+{\em radius} & -\/$>$ el radio de la circumferencia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_ab1c9b90169e6af0d61d02fd1864c1f79}\label{classphysics_1_1_box2_d_object_ab1c9b90169e6af0d61d02fd1864c1f79}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!Box2\+D\+Object@{Box2\+D\+Object}}
+\index{Box2\+D\+Object@{Box2\+D\+Object}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{Box2\+D\+Object()}{Box2DObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Box2\+D\+Object\+::\+Box2\+D\+Object (\begin{DoxyParamCaption}\item[{b2\+Vec2}]{object\+Position,  }\item[{b2\+World $\ast$}]{box2\+D\+World,  }\item[{b2\+Body\+Type}]{shape\+Type,  }\item[{sf\+::\+Color}]{shape\+Color,  }\item[{std\+::string}]{tag,  }\item[{std\+::vector$<$ b2\+Vec2 $>$}]{polygon\+Vertices }\end{DoxyParamCaption})}
+
+
+
+Contructor alternativo de \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} que sirve para contruir \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} cuya forma sea un poligono. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em object\+Position} & -\/$>$ la posici�n del objeto \\
+\hline
+{\em box2\+D\+World} & -\/$>$ el mundo al que pertenece el objeto \\
+\hline
+{\em shape\+Type} & -\/$>$ el tipo de forma del objeto \\
+\hline
+{\em shape\+Color} & -\/$>$ el color de la forma del objeto \\
+\hline
+{\em tag} & -\/$>$ el tag del objeto \\
+\hline
+{\em polygon\+Vertices} & -\/$>$ los vertices del poligono \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_a31f08b794a71539e46bb24bced4f7e64}\label{classphysics_1_1_box2_d_object_a31f08b794a71539e46bb24bced4f7e64}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!box2d\+\_\+position\+\_\+to\+\_\+sfml\+\_\+position@{box2d\+\_\+position\+\_\+to\+\_\+sfml\+\_\+position}}
+\index{box2d\+\_\+position\+\_\+to\+\_\+sfml\+\_\+position@{box2d\+\_\+position\+\_\+to\+\_\+sfml\+\_\+position}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{box2d\+\_\+position\+\_\+to\+\_\+sfml\+\_\+position()}{box2d\_position\_to\_sfml\_position()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Box2\+D\+Object\+::box2d\+\_\+position\+\_\+to\+\_\+sfml\+\_\+position (\begin{DoxyParamCaption}\item[{const b2\+Vec2 \&}]{box2d\+\_\+position,  }\item[{float}]{window\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Se encarga de convertir el sistema de coordenadas para que la escena no se vea invertida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em box2d\+\_\+position} & -\/$>$ la posici�n del \char`\"{}\+Box2\+D\+Object\char`\"{} \\
+\hline
+{\em window\+\_\+height} & -\/$>$ la altura de la ventana \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_a492fd6b506a753fd6b951d1d34887ef6}\label{classphysics_1_1_box2_d_object_a492fd6b506a753fd6b951d1d34887ef6}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!Render@{Render}}
+\index{Render@{Render}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Box2\+D\+Object\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Renderiza la escena. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em window} & -\/$>$ es la ventana en donde se tiene que renderizar el \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_ac2f4e4e05dddfd5feee67437d386cd28}\label{classphysics_1_1_box2_d_object_ac2f4e4e05dddfd5feee67437d386cd28}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!Set\+Reset@{Set\+Reset}}
+\index{Set\+Reset@{Set\+Reset}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{Set\+Reset()}{SetReset()}}
+{\footnotesize\ttfamily void physics\+::\+Box2\+D\+Object\+::\+Set\+Reset (\begin{DoxyParamCaption}\item[{bool}]{restart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza la variabla \char`\"{}reset\char`\"{} con la informaci�n del parametro. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em restart} & -\/$>$ si es \char`\"{}true\char`\"{} significa que el \char`\"{}\+Box2\+D\+Object\char`\"{} se debe resetear \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_aedb1fc28b8fee5f34c0f542b96dd1e5b}\label{classphysics_1_1_box2_d_object_aedb1fc28b8fee5f34c0f542b96dd1e5b}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!body@{body}}
+\index{body@{body}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily b2\+Body$\ast$ physics\+::\+Box2\+D\+Object\+::body}
+
+
+
+Puntero al body del \char`\"{}\+Box2\+D\+Object\char`\"{}. 
+
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_acb1533ee4d29918da8a5bef71f8471a6}\label{classphysics_1_1_box2_d_object_acb1533ee4d29918da8a5bef71f8471a6}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!box2\+D\+Shape@{box2\+D\+Shape}}
+\index{box2\+D\+Shape@{box2\+D\+Shape}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{box2\+D\+Shape}{box2DShape}}
+{\footnotesize\ttfamily b2\+Shape$\ast$ physics\+::\+Box2\+D\+Object\+::box2\+D\+Shape}
+
+
+
+Puntero a la forma f��sica del \char`\"{}\+Box2\+D\+Object\char`\"{}. 
+
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_aec4f77e4b78cb4e21d6d68b9559ab26a}\label{classphysics_1_1_box2_d_object_aec4f77e4b78cb4e21d6d68b9559ab26a}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!fixture@{fixture}}
+\index{fixture@{fixture}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{fixture}{fixture}}
+{\footnotesize\ttfamily b2\+Fixture$\ast$ physics\+::\+Box2\+D\+Object\+::fixture}
+
+
+
+Puntero a la fixture del \char`\"{}\+Box2\+D\+Object\char`\"{}. 
+
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_a9320c72ec99831f83815705310afc310}\label{classphysics_1_1_box2_d_object_a9320c72ec99831f83815705310afc310}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!graphic\+Shape@{graphic\+Shape}}
+\index{graphic\+Shape@{graphic\+Shape}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{graphic\+Shape}{graphicShape}}
+{\footnotesize\ttfamily sf\+::\+Shape$\ast$ physics\+::\+Box2\+D\+Object\+::graphic\+Shape}
+
+
+
+Puntero a la forma gr�fica del \char`\"{}\+Box2\+D\+Object\char`\"{}. 
+
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_adf5502b402e747e81b23d775edf01e1e}\label{classphysics_1_1_box2_d_object_adf5502b402e747e81b23d775edf01e1e}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!joint@{joint}}
+\index{joint@{joint}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{joint}{joint}}
+{\footnotesize\ttfamily b2\+Joint$\ast$ physics\+::\+Box2\+D\+Object\+::joint}
+
+
+
+Puntero al joint de Box2D. 
+
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_a0103458a13007508e8ec964b4902e800}\label{classphysics_1_1_box2_d_object_a0103458a13007508e8ec964b4902e800}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!object\+Tag@{object\+Tag}}
+\index{object\+Tag@{object\+Tag}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{object\+Tag}{objectTag}}
+{\footnotesize\ttfamily std\+::string physics\+::\+Box2\+D\+Object\+::object\+Tag}
+
+
+
+Contine el tag del \char`\"{}\+Box2\+D\+Object\char`\"{}. 
+
+\mbox{\Hypertarget{classphysics_1_1_box2_d_object_aaa299282a55be796b5bacd59cf1e3255}\label{classphysics_1_1_box2_d_object_aaa299282a55be796b5bacd59cf1e3255}} 
+\index{physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}!reset@{reset}}
+\index{reset@{reset}!physics\+::\+Box2\+D\+Object@{physics\+::\+Box2\+D\+Object}}
+\subsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily bool physics\+::\+Box2\+D\+Object\+::reset}
+
+
+
+Si es \char`\"{}true\char`\"{} significa que el \char`\"{}\+Box2\+D\+Object\char`\"{} se debe resetear. 
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_box2_d_object_8hpp}{Box2\+D\+Object.\+hpp}}\item 
+\mbox{\hyperlink{_box2_d_object_8cpp}{Box2\+D\+Object.\+cpp}}\end{DoxyCompactItemize}

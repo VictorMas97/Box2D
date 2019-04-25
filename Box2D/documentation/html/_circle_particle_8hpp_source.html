@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Box2D: Fichero Fuente CircleParticle.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Box2D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Box2D scene</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CircleParticle.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_circle_particle_8hpp.html">Ir a la documentaciÃ³n de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_particle_8hpp.html">Particle.hpp</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacephysics.html">physics</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classphysics_1_1_circle_particle.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classphysics_1_1_circle_particle.html">CircleParticle</a> : <span class="keyword">public</span> <a class="code" href="classphysics_1_1_particle.html">Particle</a></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="classphysics_1_1_circle_particle.html#a3cf852542c435e3b051278b2c0a95e89">CircleParticle</a>();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classphysics_1_1_circle_particle.html#a2d2c6b5715e99a4aca870327f0e38068">Render</a>(sf::RenderWindow &amp; window, <span class="keywordtype">bool</span> active) <span class="keyword">override</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classphysics_1_1_circle_particle.html#a6ac63df5e551d509793d6d09a1a0cd93">Update</a>(<span class="keywordtype">float</span> delta_time) <span class="keyword">override</span>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div><div class="ttc" id="classphysics_1_1_circle_particle_html_a2d2c6b5715e99a4aca870327f0e38068"><div class="ttname"><a href="classphysics_1_1_circle_particle.html#a2d2c6b5715e99a4aca870327f0e38068">physics::CircleParticle::Render</a></div><div class="ttdeci">virtual void Render(sf::RenderWindow &amp;window, bool active) override</div><div class="ttdoc">Renderiza la patícula con forma circular. </div><div class="ttdef"><b>Definition:</b> CircleParticle.cpp:11</div></div>
+<div class="ttc" id="classphysics_1_1_particle_html"><div class="ttname"><a href="classphysics_1_1_particle.html">physics::Particle</a></div><div class="ttdef"><b>Definition:</b> Particle.hpp:15</div></div>
+<div class="ttc" id="classphysics_1_1_circle_particle_html_a3cf852542c435e3b051278b2c0a95e89"><div class="ttname"><a href="classphysics_1_1_circle_particle.html#a3cf852542c435e3b051278b2c0a95e89">physics::CircleParticle::CircleParticle</a></div><div class="ttdeci">CircleParticle()</div><div class="ttdoc">Constructor por defecto de ParticleSystem. </div><div class="ttdef"><b>Definition:</b> CircleParticle.cpp:5</div></div>
+<div class="ttc" id="classphysics_1_1_circle_particle_html"><div class="ttname"><a href="classphysics_1_1_circle_particle.html">physics::CircleParticle</a></div><div class="ttdef"><b>Definition:</b> CircleParticle.hpp:15</div></div>
+<div class="ttc" id="classphysics_1_1_circle_particle_html_a6ac63df5e551d509793d6d09a1a0cd93"><div class="ttname"><a href="classphysics_1_1_circle_particle.html#a6ac63df5e551d509793d6d09a1a0cd93">physics::CircleParticle::Update</a></div><div class="ttdeci">virtual void Update(float delta_time) override</div><div class="ttdoc">Atualiza la partícula con forma circular. </div><div class="ttdef"><b>Definition:</b> CircleParticle.cpp:19</div></div>
+<div class="ttc" id="namespacephysics_html"><div class="ttname"><a href="namespacephysics.html">physics</a></div><div class="ttdef"><b>Definition:</b> Box2DObject.cpp:4</div></div>
+<div class="ttc" id="_particle_8hpp_html"><div class="ttname"><a href="_particle_8hpp.html">Particle.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

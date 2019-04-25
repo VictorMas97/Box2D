@@ -1,0 +1,145 @@
+\hypertarget{classphysics_1_1_particle}{}\section{Referencia de la Clase physics\+:\+:Particle}
+\label{classphysics_1_1_particle}\index{physics\+::\+Particle@{physics\+::\+Particle}}
+
+
+{\ttfamily \#include $<$Particle.\+hpp$>$}
+
+Diagrama de herencias de physics\+:\+:Particle\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classphysics_1_1_particle}
+\end{center}
+\end{figure}
+\subsection*{MÃ©todos pÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_particle_a8e78d88c6e38d9a9cc9d5cc4a587358c}{Render}} (sf\+::\+Render\+Window \&window, bool active)=0
+\begin{DoxyCompactList}\small\item\em Renderiza la partícula, es un método virtual. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_particle_ac44f133ed437b12914828315efeea79f}{Update}} (float delta\+\_\+time)=0
+\begin{DoxyCompactList}\small\item\em Atualiza la partícula, es un método virtual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos pÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classphysics_1_1_particle_ad017940d860da63b3711128ef86c1f21}{start\+Time}} = 0
+\begin{DoxyCompactList}\small\item\em Actúa de timer, y su valor inicial es 0. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classphysics_1_1_particle_aca4d2b2baf199876559b7dac338e68ba}{life\+Time}}
+\begin{DoxyCompactList}\small\item\em El tiempo de vida de la partícula. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classphysics_1_1_particle_a3d04ce30ecddcca0a2c70b75383ec8d8}{start\+Position}}
+\begin{DoxyCompactList}\small\item\em La posición inicial de la partícula. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classphysics_1_1_particle_a1d0a0aca61f011c98d68675ff5a16782}{position}}
+\begin{DoxyCompactList}\small\item\em La posición actual de la partícula. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classphysics_1_1_particle_a4f5fc3f2be3f829ba2108aa4c46d8686}{velocity}}
+\begin{DoxyCompactList}\small\item\em La velocidad inicial y actual de la partícula. \end{DoxyCompactList}\item 
+sf\+::\+Shape $\ast$ \mbox{\hyperlink{classphysics_1_1_particle_a18923a7446d8242155a8dc0728db4a00}{shape}}
+\begin{DoxyCompactList}\small\item\em Puntero a la forma gráfica de la partícula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{DocumentaciÃ³n de las funciones miembro}
+\mbox{\Hypertarget{classphysics_1_1_particle_a8e78d88c6e38d9a9cc9d5cc4a587358c}\label{classphysics_1_1_particle_a8e78d88c6e38d9a9cc9d5cc4a587358c}} 
+\index{physics\+::\+Particle@{physics\+::\+Particle}!Render@{Render}}
+\index{Render@{Render}!physics\+::\+Particle@{physics\+::\+Particle}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily virtual void physics\+::\+Particle\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{bool}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Renderiza la partícula, es un método virtual. 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em window} & -\/$>$ es la ventana en donde se tiene que renderizar la patícula \\
+\hline
+{\em active} & -\/$>$ Si es \char`\"{}true\char`\"{} significa que la partícula se debe renderizar \\
+\hline
+\end{DoxyParams}
+
+
+Implementado en \mbox{\hyperlink{classphysics_1_1_circle_particle_a2d2c6b5715e99a4aca870327f0e38068}{physics\+::\+Circle\+Particle}}.
+
+\mbox{\Hypertarget{classphysics_1_1_particle_ac44f133ed437b12914828315efeea79f}\label{classphysics_1_1_particle_ac44f133ed437b12914828315efeea79f}} 
+\index{physics\+::\+Particle@{physics\+::\+Particle}!Update@{Update}}
+\index{Update@{Update}!physics\+::\+Particle@{physics\+::\+Particle}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void physics\+::\+Particle\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Atualiza la partícula, es un método virtual. 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em delta\+\_\+time} & -\/$>$ son los segundos por frame \\
+\hline
+\end{DoxyParams}
+
+
+Implementado en \mbox{\hyperlink{classphysics_1_1_circle_particle_a6ac63df5e551d509793d6d09a1a0cd93}{physics\+::\+Circle\+Particle}}.
+
+
+
+\subsection{DocumentaciÃ³n de los datos miembro}
+\mbox{\Hypertarget{classphysics_1_1_particle_aca4d2b2baf199876559b7dac338e68ba}\label{classphysics_1_1_particle_aca4d2b2baf199876559b7dac338e68ba}} 
+\index{physics\+::\+Particle@{physics\+::\+Particle}!life\+Time@{life\+Time}}
+\index{life\+Time@{life\+Time}!physics\+::\+Particle@{physics\+::\+Particle}}
+\subsubsection{\texorpdfstring{life\+Time}{lifeTime}}
+{\footnotesize\ttfamily float physics\+::\+Particle\+::life\+Time}
+
+
+
+El tiempo de vida de la partícula. 
+
+\mbox{\Hypertarget{classphysics_1_1_particle_a1d0a0aca61f011c98d68675ff5a16782}\label{classphysics_1_1_particle_a1d0a0aca61f011c98d68675ff5a16782}} 
+\index{physics\+::\+Particle@{physics\+::\+Particle}!position@{position}}
+\index{position@{position}!physics\+::\+Particle@{physics\+::\+Particle}}
+\subsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily sf\+::\+Vector2f physics\+::\+Particle\+::position}
+
+
+
+La posición actual de la partícula. 
+
+\mbox{\Hypertarget{classphysics_1_1_particle_a18923a7446d8242155a8dc0728db4a00}\label{classphysics_1_1_particle_a18923a7446d8242155a8dc0728db4a00}} 
+\index{physics\+::\+Particle@{physics\+::\+Particle}!shape@{shape}}
+\index{shape@{shape}!physics\+::\+Particle@{physics\+::\+Particle}}
+\subsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily sf\+::\+Shape$\ast$ physics\+::\+Particle\+::shape}
+
+
+
+Puntero a la forma gráfica de la partícula. 
+
+\mbox{\Hypertarget{classphysics_1_1_particle_a3d04ce30ecddcca0a2c70b75383ec8d8}\label{classphysics_1_1_particle_a3d04ce30ecddcca0a2c70b75383ec8d8}} 
+\index{physics\+::\+Particle@{physics\+::\+Particle}!start\+Position@{start\+Position}}
+\index{start\+Position@{start\+Position}!physics\+::\+Particle@{physics\+::\+Particle}}
+\subsubsection{\texorpdfstring{start\+Position}{startPosition}}
+{\footnotesize\ttfamily sf\+::\+Vector2f physics\+::\+Particle\+::start\+Position}
+
+
+
+La posición inicial de la partícula. 
+
+\mbox{\Hypertarget{classphysics_1_1_particle_ad017940d860da63b3711128ef86c1f21}\label{classphysics_1_1_particle_ad017940d860da63b3711128ef86c1f21}} 
+\index{physics\+::\+Particle@{physics\+::\+Particle}!start\+Time@{start\+Time}}
+\index{start\+Time@{start\+Time}!physics\+::\+Particle@{physics\+::\+Particle}}
+\subsubsection{\texorpdfstring{start\+Time}{startTime}}
+{\footnotesize\ttfamily float physics\+::\+Particle\+::start\+Time = 0}
+
+
+
+Actúa de timer, y su valor inicial es 0. 
+
+\mbox{\Hypertarget{classphysics_1_1_particle_a4f5fc3f2be3f829ba2108aa4c46d8686}\label{classphysics_1_1_particle_a4f5fc3f2be3f829ba2108aa4c46d8686}} 
+\index{physics\+::\+Particle@{physics\+::\+Particle}!velocity@{velocity}}
+\index{velocity@{velocity}!physics\+::\+Particle@{physics\+::\+Particle}}
+\subsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily sf\+::\+Vector2f physics\+::\+Particle\+::velocity}
+
+
+
+La velocidad inicial y actual de la partícula. 
+
+
+
+La documentaciÃ³n para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_particle_8hpp}{Particle.\+hpp}}\end{DoxyCompactItemize}

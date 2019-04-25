@@ -1,0 +1,3 @@
+Right: Mueve la pelota hacia la derecha
+Left: Mueve la pelota hacia la izquierda
+F: Desactiva el fuego

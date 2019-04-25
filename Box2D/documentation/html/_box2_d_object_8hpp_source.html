@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Box2D: Fichero Fuente Box2DObject.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Box2D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Box2D scene</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Box2DObject.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_box2_d_object_8hpp.html">Ir a la documentaciÃ³n de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;Box2D/Box2D.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;SFML/Window.hpp&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacephysics.html">physics</a></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classphysics_1_1_box2_d_object.html">Box2DObject</a></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html#a7e516163bae7ac67fecf1fc8f0efe4a8">   25</a></span>&#160;        <a class="code" href="classphysics_1_1_box2_d_object.html#a7e516163bae7ac67fecf1fc8f0efe4a8">Box2DObject</a>() {};</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classphysics_1_1_box2_d_object.html#a7e516163bae7ac67fecf1fc8f0efe4a8">Box2DObject</a>(b2Vec2 objectPosition, b2World* box2DWorld, b2BodyType shapeType, sf::Color shapeColor, std::string tag, <span class="keywordtype">float</span> radius);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classphysics_1_1_box2_d_object.html#a7e516163bae7ac67fecf1fc8f0efe4a8">Box2DObject</a>(b2Vec2 objectPosition, b2World* box2DWorld, b2BodyType shapeType, sf::Color shapeColor, std::string tag, std::vector&lt;b2Vec2&gt; polygonVertices);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        sf::Vector2f <a class="code" href="classphysics_1_1_box2_d_object.html#a31f08b794a71539e46bb24bced4f7e64">box2d_position_to_sfml_position</a>(<span class="keyword">const</span> b2Vec2 &amp; box2d_position, <span class="keywordtype">float</span> window_height);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classphysics_1_1_box2_d_object.html#a492fd6b506a753fd6b951d1d34887ef6">Render</a>(sf::RenderWindow &amp; window);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html#ac2f4e4e05dddfd5feee67437d386cd28">   71</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classphysics_1_1_box2_d_object.html#ac2f4e4e05dddfd5feee67437d386cd28">SetReset</a>(<span class="keywordtype">bool</span> restart)</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="classphysics_1_1_box2_d_object.html#aaa299282a55be796b5bacd59cf1e3255">reset</a> = restart;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html#acb1533ee4d29918da8a5bef71f8471a6">   80</a></span>&#160;        b2Shape * <a class="code" href="classphysics_1_1_box2_d_object.html#acb1533ee4d29918da8a5bef71f8471a6">box2DShape</a>;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html#a9320c72ec99831f83815705310afc310">   86</a></span>&#160;        sf::Shape * <a class="code" href="classphysics_1_1_box2_d_object.html#a9320c72ec99831f83815705310afc310">graphicShape</a>;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html#aedb1fc28b8fee5f34c0f542b96dd1e5b">   92</a></span>&#160;        b2Body * <a class="code" href="classphysics_1_1_box2_d_object.html#aedb1fc28b8fee5f34c0f542b96dd1e5b">body</a>;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div><div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html#adf5502b402e747e81b23d775edf01e1e">   98</a></span>&#160;        b2Joint * <a class="code" href="classphysics_1_1_box2_d_object.html#adf5502b402e747e81b23d775edf01e1e">joint</a>;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html#aec4f77e4b78cb4e21d6d68b9559ab26a">  104</a></span>&#160;        b2Fixture * <a class="code" href="classphysics_1_1_box2_d_object.html#aec4f77e4b78cb4e21d6d68b9559ab26a">fixture</a>;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div><div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html#aaa299282a55be796b5bacd59cf1e3255">  110</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classphysics_1_1_box2_d_object.html#aaa299282a55be796b5bacd59cf1e3255">reset</a>;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div><div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classphysics_1_1_box2_d_object.html#a0103458a13007508e8ec964b4902e800">  116</a></span>&#160;        std::string <a class="code" href="classphysics_1_1_box2_d_object.html#a0103458a13007508e8ec964b4902e800">objectTag</a>;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    };</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="ttc" id="classphysics_1_1_box2_d_object_html_acb1533ee4d29918da8a5bef71f8471a6"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#acb1533ee4d29918da8a5bef71f8471a6">physics::Box2DObject::box2DShape</a></div><div class="ttdeci">b2Shape * box2DShape</div><div class="ttdoc">Puntero a la forma fí­sica del &quot;Box2DObject&quot;. </div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:80</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_aaa299282a55be796b5bacd59cf1e3255"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#aaa299282a55be796b5bacd59cf1e3255">physics::Box2DObject::reset</a></div><div class="ttdeci">bool reset</div><div class="ttdoc">Si es &quot;true&quot; significa que el &quot;Box2DObject&quot; se debe resetear. </div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:110</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html">physics::Box2DObject</a></div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:17</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_a0103458a13007508e8ec964b4902e800"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#a0103458a13007508e8ec964b4902e800">physics::Box2DObject::objectTag</a></div><div class="ttdeci">std::string objectTag</div><div class="ttdoc">Contine el tag del &quot;Box2DObject&quot;. </div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:116</div></div>
+<div class="ttc" id="namespacephysics_html"><div class="ttname"><a href="namespacephysics.html">physics</a></div><div class="ttdef"><b>Definition:</b> Box2DObject.cpp:4</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_a492fd6b506a753fd6b951d1d34887ef6"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#a492fd6b506a753fd6b951d1d34887ef6">physics::Box2DObject::Render</a></div><div class="ttdeci">void Render(sf::RenderWindow &amp;window)</div><div class="ttdoc">Renderiza la escena. </div><div class="ttdef"><b>Definition:</b> Box2DObject.cpp:78</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_aedb1fc28b8fee5f34c0f542b96dd1e5b"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#aedb1fc28b8fee5f34c0f542b96dd1e5b">physics::Box2DObject::body</a></div><div class="ttdeci">b2Body * body</div><div class="ttdoc">Puntero al body del &quot;Box2DObject&quot;. </div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:92</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_a9320c72ec99831f83815705310afc310"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#a9320c72ec99831f83815705310afc310">physics::Box2DObject::graphicShape</a></div><div class="ttdeci">sf::Shape * graphicShape</div><div class="ttdoc">Puntero a la forma gráfica del &quot;Box2DObject&quot;. </div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:86</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_ac2f4e4e05dddfd5feee67437d386cd28"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#ac2f4e4e05dddfd5feee67437d386cd28">physics::Box2DObject::SetReset</a></div><div class="ttdeci">void SetReset(bool restart)</div><div class="ttdoc">Actualiza la variabla &quot;reset&quot; con la información del parametro. </div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:71</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_adf5502b402e747e81b23d775edf01e1e"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#adf5502b402e747e81b23d775edf01e1e">physics::Box2DObject::joint</a></div><div class="ttdeci">b2Joint * joint</div><div class="ttdoc">Puntero al joint de Box2D. </div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:98</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_a7e516163bae7ac67fecf1fc8f0efe4a8"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#a7e516163bae7ac67fecf1fc8f0efe4a8">physics::Box2DObject::Box2DObject</a></div><div class="ttdeci">Box2DObject()</div><div class="ttdoc">Constructor por defecto de Box2DObject. </div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:25</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_aec4f77e4b78cb4e21d6d68b9559ab26a"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#aec4f77e4b78cb4e21d6d68b9559ab26a">physics::Box2DObject::fixture</a></div><div class="ttdeci">b2Fixture * fixture</div><div class="ttdoc">Puntero a la fixture del &quot;Box2DObject&quot;. </div><div class="ttdef"><b>Definition:</b> Box2DObject.hpp:104</div></div>
+<div class="ttc" id="classphysics_1_1_box2_d_object_html_a31f08b794a71539e46bb24bced4f7e64"><div class="ttname"><a href="classphysics_1_1_box2_d_object.html#a31f08b794a71539e46bb24bced4f7e64">physics::Box2DObject::box2d_position_to_sfml_position</a></div><div class="ttdeci">sf::Vector2f box2d_position_to_sfml_position(const b2Vec2 &amp;box2d_position, float window_height)</div><div class="ttdoc">Se encarga de convertir el sistema de coordenadas para que la escena no se vea invertida. </div><div class="ttdef"><b>Definition:</b> Box2DObject.cpp:73</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

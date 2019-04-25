@@ -1,0 +1,142 @@
+\hypertarget{classphysics_1_1_particle_system}{}\section{Referencia de la plantilla de la Clase physics\+:\+:Particle\+System$<$ P\+A\+R\+T\+I\+C\+LE $>$}
+\label{classphysics_1_1_particle_system}\index{physics\+::\+Particle\+System$<$ P\+A\+R\+T\+I\+C\+L\+E $>$@{physics\+::\+Particle\+System$<$ P\+A\+R\+T\+I\+C\+L\+E $>$}}
+
+
+{\ttfamily \#include $<$Particle\+System.\+hpp$>$}
+
+\subsection*{MÃ©todos pÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysics_1_1_particle_system_a8739be0be3c82af68f324521703735d8}{Particle\+System}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de \mbox{\hyperlink{classphysics_1_1_particle_system}{Particle\+System}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysics_1_1_particle_system_a584f1c968c76588c17de0da2e511f6e8}{Particle\+System}} (int particle\+Count, sf\+::\+Vector2f life\+Time, sf\+::\+Vector2f Particle\+System\+Position, sf\+::\+Vector2f x\+Position\+Offset, sf\+::\+Vector2f y\+Position\+Offset, sf\+::\+Vector2f Particle\+System\+Velocity, sf\+::\+Vector2f x\+Velocity\+Offset, sf\+::\+Vector2f y\+Velocity\+Offset)
+\begin{DoxyCompactList}\small\item\em Renderiza la escena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysics_1_1_particle_system_aed8455c353e3ee0fcc4e1bb167c91d95}{Render}} (sf\+::\+Render\+Window \&window, bool Particle\+System\+Active)
+\begin{DoxyCompactList}\small\item\em Renderiza el sistema de partículas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysics_1_1_particle_system_ae217afe8b9b47d8a7a8b0055326606c4}{Update}} (float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Atualiza el sistema de partículas. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classphysics_1_1_particle_system_aac097412188bb8be886f86329109dd7b}{get\+Ramdom\+Float}} (float a, float b)
+\begin{DoxyCompactList}\small\item\em Calcula un número aleatorio entre el rango de los parámetros y lo devuelve. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos pÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ P\+A\+R\+T\+I\+C\+LE $>$ \mbox{\hyperlink{classphysics_1_1_particle_system_a9bd70b33a15bc7141aba39b23d737005}{particles}}
+\begin{DoxyCompactList}\small\item\em Un vector de todas las pertículas que pertenecen al mismo sistema de partículas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{DocumentaciÃ³n del constructor y destructor}
+\mbox{\Hypertarget{classphysics_1_1_particle_system_a8739be0be3c82af68f324521703735d8}\label{classphysics_1_1_particle_system_a8739be0be3c82af68f324521703735d8}} 
+\index{physics\+::\+Particle\+System@{physics\+::\+Particle\+System}!Particle\+System@{Particle\+System}}
+\index{Particle\+System@{Particle\+System}!physics\+::\+Particle\+System@{physics\+::\+Particle\+System}}
+\subsubsection{\texorpdfstring{Particle\+System()}{ParticleSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename P\+A\+R\+T\+I\+C\+LE$>$ \\
+\mbox{\hyperlink{classphysics_1_1_particle_system}{physics\+::\+Particle\+System}}$<$ P\+A\+R\+T\+I\+C\+LE $>$\+::\mbox{\hyperlink{classphysics_1_1_particle_system}{Particle\+System}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto de \mbox{\hyperlink{classphysics_1_1_particle_system}{Particle\+System}}. 
+
+\mbox{\Hypertarget{classphysics_1_1_particle_system_a584f1c968c76588c17de0da2e511f6e8}\label{classphysics_1_1_particle_system_a584f1c968c76588c17de0da2e511f6e8}} 
+\index{physics\+::\+Particle\+System@{physics\+::\+Particle\+System}!Particle\+System@{Particle\+System}}
+\index{Particle\+System@{Particle\+System}!physics\+::\+Particle\+System@{physics\+::\+Particle\+System}}
+\subsubsection{\texorpdfstring{Particle\+System()}{ParticleSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename P\+A\+R\+T\+I\+C\+LE$>$ \\
+\mbox{\hyperlink{classphysics_1_1_particle_system}{physics\+::\+Particle\+System}}$<$ P\+A\+R\+T\+I\+C\+LE $>$\+::\mbox{\hyperlink{classphysics_1_1_particle_system}{Particle\+System}} (\begin{DoxyParamCaption}\item[{int}]{particle\+Count,  }\item[{sf\+::\+Vector2f}]{life\+Time,  }\item[{sf\+::\+Vector2f}]{Particle\+System\+Position,  }\item[{sf\+::\+Vector2f}]{x\+Position\+Offset,  }\item[{sf\+::\+Vector2f}]{y\+Position\+Offset,  }\item[{sf\+::\+Vector2f}]{Particle\+System\+Velocity,  }\item[{sf\+::\+Vector2f}]{x\+Velocity\+Offset,  }\item[{sf\+::\+Vector2f}]{y\+Velocity\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Renderiza la escena. 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em particle\+Count} & -\/$>$ el número de partículas que va a tener el sistema de partículas \\
+\hline
+{\em life\+Time} & -\/$>$ el tiempo de vida del sistema de partículas \\
+\hline
+{\em Particle\+System\+Position} & -\/$>$ la posición del sistema de partículas \\
+\hline
+{\em x\+Position\+Offset} & -\/$>$ los offsets de la posición del eje X del sistema de partículas \\
+\hline
+{\em y\+Position\+Offset} & -\/$>$ los offsets de la posición del eje Y del sistema de partículas \\
+\hline
+{\em Particle\+System\+Velocity} & -\/$>$ la velocidad del sistema de partículas \\
+\hline
+{\em x\+Velocity\+Offset} & -\/$>$ los offsets de la velocidad del eje X del sistema de partículas \\
+\hline
+{\em y\+Velocity\+Offset} & -\/$>$ los offsets de la velocidad del eje Y del sistema de partículas \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{DocumentaciÃ³n de las funciones miembro}
+\mbox{\Hypertarget{classphysics_1_1_particle_system_aac097412188bb8be886f86329109dd7b}\label{classphysics_1_1_particle_system_aac097412188bb8be886f86329109dd7b}} 
+\index{physics\+::\+Particle\+System@{physics\+::\+Particle\+System}!get\+Ramdom\+Float@{get\+Ramdom\+Float}}
+\index{get\+Ramdom\+Float@{get\+Ramdom\+Float}!physics\+::\+Particle\+System@{physics\+::\+Particle\+System}}
+\subsubsection{\texorpdfstring{get\+Ramdom\+Float()}{getRamdomFloat()}}
+{\footnotesize\ttfamily template$<$typename P\+A\+R\+T\+I\+C\+LE$>$ \\
+float \mbox{\hyperlink{classphysics_1_1_particle_system}{physics\+::\+Particle\+System}}$<$ P\+A\+R\+T\+I\+C\+LE $>$\+::get\+Ramdom\+Float (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula un número aleatorio entre el rango de los parámetros y lo devuelve. 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em a} & -\/$>$ el número mínimo del rango \\
+\hline
+{\em b} & -\/$>$ el número máximo del rango \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classphysics_1_1_particle_system_aed8455c353e3ee0fcc4e1bb167c91d95}\label{classphysics_1_1_particle_system_aed8455c353e3ee0fcc4e1bb167c91d95}} 
+\index{physics\+::\+Particle\+System@{physics\+::\+Particle\+System}!Render@{Render}}
+\index{Render@{Render}!physics\+::\+Particle\+System@{physics\+::\+Particle\+System}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily template$<$typename P\+A\+R\+T\+I\+C\+LE$>$ \\
+void \mbox{\hyperlink{classphysics_1_1_particle_system}{physics\+::\+Particle\+System}}$<$ P\+A\+R\+T\+I\+C\+LE $>$\+::Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{bool}]{Particle\+System\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Renderiza el sistema de partículas. 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em window} & -\/$>$ es la ventana en donde se tiene que renderizar la escena \\
+\hline
+{\em Particle\+System\+Active} & -\/$>$ Si es \char`\"{}true\char`\"{} significa que el sistema de partículas se debe renderizar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classphysics_1_1_particle_system_ae217afe8b9b47d8a7a8b0055326606c4}\label{classphysics_1_1_particle_system_ae217afe8b9b47d8a7a8b0055326606c4}} 
+\index{physics\+::\+Particle\+System@{physics\+::\+Particle\+System}!Update@{Update}}
+\index{Update@{Update}!physics\+::\+Particle\+System@{physics\+::\+Particle\+System}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily template$<$typename P\+A\+R\+T\+I\+C\+LE$>$ \\
+void \mbox{\hyperlink{classphysics_1_1_particle_system}{physics\+::\+Particle\+System}}$<$ P\+A\+R\+T\+I\+C\+LE $>$\+::Update (\begin{DoxyParamCaption}\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza el sistema de partículas. 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em delta\+\_\+time} & -\/$>$ son los segundos por frame \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{DocumentaciÃ³n de los datos miembro}
+\mbox{\Hypertarget{classphysics_1_1_particle_system_a9bd70b33a15bc7141aba39b23d737005}\label{classphysics_1_1_particle_system_a9bd70b33a15bc7141aba39b23d737005}} 
+\index{physics\+::\+Particle\+System@{physics\+::\+Particle\+System}!particles@{particles}}
+\index{particles@{particles}!physics\+::\+Particle\+System@{physics\+::\+Particle\+System}}
+\subsubsection{\texorpdfstring{particles}{particles}}
+{\footnotesize\ttfamily template$<$typename P\+A\+R\+T\+I\+C\+LE$>$ \\
+std\+::vector$<$P\+A\+R\+T\+I\+C\+LE$>$ \mbox{\hyperlink{classphysics_1_1_particle_system}{physics\+::\+Particle\+System}}$<$ P\+A\+R\+T\+I\+C\+LE $>$\+::particles}
+
+
+
+Un vector de todas las pertículas que pertenecen al mismo sistema de partículas. 
+
+
+
+La documentaciÃ³n para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_particle_system_8hpp}{Particle\+System.\+hpp}}\end{DoxyCompactItemize}

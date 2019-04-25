@@ -1,0 +1,150 @@
+\hypertarget{classphysics_1_1_scene}{}\section{Referencia de la Clase physics\+:\+:Scene}
+\label{classphysics_1_1_scene}\index{physics\+::\+Scene@{physics\+::\+Scene}}
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphysics_1_1_scene_ac034b284d50291c66ef8553001e37fb2}{Scene}} (b2\+Vec2 gravity=b2\+Vec2\{ 0, -\/9.\+8f \})
+\begin{DoxyCompactList}\small\item\em Constructor de la escena. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classphysics_1_1_scene_a3b8cec2e32546713915f8c6303c951f1}{$\sim$\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Desontructor de la escena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysics_1_1_scene_afc5239f30d0ee1d542bc1f4e3a8cbf63}{Update}} (float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Atualiza la escena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classphysics_1_1_scene_ab86f3c5e0389b5ef13a5b5047fcc1b94}{Render}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Renderiza la escena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} $>$ $>$ \mbox{\hyperlink{classphysics_1_1_scene_a9e3e902466f5d6d4aa81c1db3920af4e}{scene\+Objects}}
+\begin{DoxyCompactList}\small\item\em Contine todos los \char`\"{}\+Box2\+D\+Object\char`\"{} de la escena. \end{DoxyCompactList}\item 
+b2\+World $\ast$ \mbox{\hyperlink{classphysics_1_1_scene_a33797c64e136e212027672fade6cc30a}{box2\+D\+World}}
+\begin{DoxyCompactList}\small\item\em Un puntero al mundo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacephysics_a962adae29e6ee31067fabcf90eb01dac}{Circle\+Particle\+System}} \mbox{\hyperlink{classphysics_1_1_scene_a21559bc49a1dbeb0fede231f35072b66}{particle\+System}}
+\begin{DoxyCompactList}\small\item\em Sistema del part�culas de part�culas redondas. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}} $>$ \mbox{\hyperlink{classphysics_1_1_scene_af7834c449556f5ca56703abd81ca8ddc}{ball}}
+\begin{DoxyCompactList}\small\item\em Puntero al \char`\"{}\+Box2\+D\+Object\char`\"{} de la escena cuyo tag es \char`\"{}ball\char`\"{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classphysics_1_1_scene_add6ec396d473e5dae5bf068e720dd8c6}{particle\+System\+Active}}
+\begin{DoxyCompactList}\small\item\em Si es \char`\"{}true\char`\"{} significa que la \char`\"{}ball\char`\"{} se debe resetear. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classphysics_1_1_scene_ac034b284d50291c66ef8553001e37fb2}\label{classphysics_1_1_scene_ac034b284d50291c66ef8553001e37fb2}} 
+\index{physics\+::\+Scene@{physics\+::\+Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!physics\+::\+Scene@{physics\+::\+Scene}}
+\subsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{b2\+Vec2}]{gravity = {\ttfamily b2Vec2\{~0,~-\/9.8f~\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor de la escena. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em gravity} & -\/$>$ gravedad del mundo, por defecto es de -\/9.\+8 en el eje Y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classphysics_1_1_scene_a3b8cec2e32546713915f8c6303c951f1}\label{classphysics_1_1_scene_a3b8cec2e32546713915f8c6303c951f1}} 
+\index{physics\+::\+Scene@{physics\+::\+Scene}!````~Scene@{$\sim$\+Scene}}
+\index{````~Scene@{$\sim$\+Scene}!physics\+::\+Scene@{physics\+::\+Scene}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene()}{~Scene()}}
+{\footnotesize\ttfamily Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Desontructor de la escena. 
+
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classphysics_1_1_scene_ab86f3c5e0389b5ef13a5b5047fcc1b94}\label{classphysics_1_1_scene_ab86f3c5e0389b5ef13a5b5047fcc1b94}} 
+\index{physics\+::\+Scene@{physics\+::\+Scene}!Render@{Render}}
+\index{Render@{Render}!physics\+::\+Scene@{physics\+::\+Scene}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Scene\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Renderiza la escena. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em window} & -\/$>$ es la ventana en donde se tiene que renderizar la escena \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classphysics_1_1_scene_afc5239f30d0ee1d542bc1f4e3a8cbf63}\label{classphysics_1_1_scene_afc5239f30d0ee1d542bc1f4e3a8cbf63}} 
+\index{physics\+::\+Scene@{physics\+::\+Scene}!Update@{Update}}
+\index{Update@{Update}!physics\+::\+Scene@{physics\+::\+Scene}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Scene\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Atualiza la escena. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em delta\+\_\+time} & -\/$>$ son los segundos por frame \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classphysics_1_1_scene_af7834c449556f5ca56703abd81ca8ddc}\label{classphysics_1_1_scene_af7834c449556f5ca56703abd81ca8ddc}} 
+\index{physics\+::\+Scene@{physics\+::\+Scene}!ball@{ball}}
+\index{ball@{ball}!physics\+::\+Scene@{physics\+::\+Scene}}
+\subsubsection{\texorpdfstring{ball}{ball}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}}$>$ physics\+::\+Scene\+::ball}
+
+
+
+Puntero al \char`\"{}\+Box2\+D\+Object\char`\"{} de la escena cuyo tag es \char`\"{}ball\char`\"{}. 
+
+\mbox{\Hypertarget{classphysics_1_1_scene_a33797c64e136e212027672fade6cc30a}\label{classphysics_1_1_scene_a33797c64e136e212027672fade6cc30a}} 
+\index{physics\+::\+Scene@{physics\+::\+Scene}!box2\+D\+World@{box2\+D\+World}}
+\index{box2\+D\+World@{box2\+D\+World}!physics\+::\+Scene@{physics\+::\+Scene}}
+\subsubsection{\texorpdfstring{box2\+D\+World}{box2DWorld}}
+{\footnotesize\ttfamily b2\+World$\ast$ physics\+::\+Scene\+::box2\+D\+World}
+
+
+
+Un puntero al mundo. 
+
+\mbox{\Hypertarget{classphysics_1_1_scene_a21559bc49a1dbeb0fede231f35072b66}\label{classphysics_1_1_scene_a21559bc49a1dbeb0fede231f35072b66}} 
+\index{physics\+::\+Scene@{physics\+::\+Scene}!particle\+System@{particle\+System}}
+\index{particle\+System@{particle\+System}!physics\+::\+Scene@{physics\+::\+Scene}}
+\subsubsection{\texorpdfstring{particle\+System}{particleSystem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacephysics_a962adae29e6ee31067fabcf90eb01dac}{Circle\+Particle\+System}} physics\+::\+Scene\+::particle\+System}
+
+
+
+Sistema del part�culas de part�culas redondas. 
+
+\mbox{\Hypertarget{classphysics_1_1_scene_add6ec396d473e5dae5bf068e720dd8c6}\label{classphysics_1_1_scene_add6ec396d473e5dae5bf068e720dd8c6}} 
+\index{physics\+::\+Scene@{physics\+::\+Scene}!particle\+System\+Active@{particle\+System\+Active}}
+\index{particle\+System\+Active@{particle\+System\+Active}!physics\+::\+Scene@{physics\+::\+Scene}}
+\subsubsection{\texorpdfstring{particle\+System\+Active}{particleSystemActive}}
+{\footnotesize\ttfamily bool physics\+::\+Scene\+::particle\+System\+Active}
+
+
+
+Si es \char`\"{}true\char`\"{} significa que la \char`\"{}ball\char`\"{} se debe resetear. 
+
+\mbox{\Hypertarget{classphysics_1_1_scene_a9e3e902466f5d6d4aa81c1db3920af4e}\label{classphysics_1_1_scene_a9e3e902466f5d6d4aa81c1db3920af4e}} 
+\index{physics\+::\+Scene@{physics\+::\+Scene}!scene\+Objects@{scene\+Objects}}
+\index{scene\+Objects@{scene\+Objects}!physics\+::\+Scene@{physics\+::\+Scene}}
+\subsubsection{\texorpdfstring{scene\+Objects}{sceneObjects}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classphysics_1_1_box2_d_object}{Box2\+D\+Object}}$>$ $>$ physics\+::\+Scene\+::scene\+Objects}
+
+
+
+Contine todos los \char`\"{}\+Box2\+D\+Object\char`\"{} de la escena. 
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_scene_8hpp}{Scene.\+hpp}}\item 
+\mbox{\hyperlink{_scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}
